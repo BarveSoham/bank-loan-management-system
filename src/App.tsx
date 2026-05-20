@@ -28,7 +28,7 @@ const fetchCustomers =
     try {
       const response =
         await axios.get(
-          "http://localhost:5000/customers"
+          "https://loanflow-backend.onrender.com/customers"
         );
 
       setCustomers(
@@ -49,7 +49,7 @@ const fetchLoans =
     try {
       const response =
         await axios.get(
-          "http://localhost:5000/loans"
+          "https://loanflow-backend.onrender.com/loans"
         );
 
       setLoans(

@@ -242,7 +242,7 @@ export default function Loans({
 
     const response =
       await axios.post(
-        "http://localhost:5000/loans",
+        "https://loanflow-backend.onrender.com/loans",
 
         newLoan
       );
@@ -273,7 +273,7 @@ export default function Loans({
 
         const response =
           await axios.put(
-            `http://localhost:5000/loans/${id}`,
+            `https://loanflow-backend.onrender.com/loans/${id}`,
 
             {
               status:
@@ -364,7 +364,7 @@ export default function Loans({
     async (id: string) => {
       try {
         await axios.delete(
-          `http://localhost:5000/loans/${id}`
+          `https://loanflow-backend.onrender.com/loans/${id}`
         );
 
         setLoans(

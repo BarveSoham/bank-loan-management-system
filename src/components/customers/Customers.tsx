@@ -118,7 +118,7 @@ export default function Customers({
 
       const response =
         await axios.post(
-          "http://localhost:5000/customers",
+          "https://loanflow-backend.onrender.com/customers",
 
           newCustomer
         );
@@ -151,7 +151,7 @@ export default function Customers({
     async (id: string) => {
       try {
         await axios.delete(
-          `http://localhost:5000/customers/${id}`
+          `https://loanflow-backend.onrender.com/customers/${id}`
         );
 
         setCustomers(
@@ -1393,7 +1393,7 @@ export default function Customers({
                   try {
                     const response =
                       await axios.put(
-                        `http://localhost:5000/customers/${selectedCustomer!.id}`,
+                        `https://loanflow-backend.onrender.com/customers/${selectedCustomer!.id}`,
                         selectedCustomer
                       );
 
