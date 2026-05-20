@@ -225,6 +225,16 @@ app.post(
             employer,
           ]
         );
+      await pool.query(
+        `
+      UPDATE customers
+
+      SET loans = loans + 1
+
+      WHERE name = $1
+      `,
+        [customer]
+      );
 
       res.status(201).json(
         result.rows[0]
@@ -364,6 +374,33 @@ app.delete(
     try {
       const { id } =
         req.params;
+
+      const loanResult =
+        await pool.query(
+          `
+        SELECT customer
+        FROM loans
+        WHERE id = $1
+        `,
+          [id]
+        );
+
+      const customerName =
+        loanResult.rows[0]
+          ?.customer;
+
+      if (customerName) {
+        await pool.query(
+        `
+        UPDATE customers
+
+        SET loans = loans - 1
+
+        WHERE name = $1
+        `,
+          [customerName]
+        );
+      }
 
       await pool.query(
         "DELETE FROM loans WHERE id = $1",
