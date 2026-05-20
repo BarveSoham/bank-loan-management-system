@@ -190,5 +190,5 @@ Hosted on Neon PostgreSQL.
 GitHub:
 [Soham Barve GitHub Profile]( https://github.com/BarveSoham)
 [Sharanamma GitHub Profile](https://github.com/Sharanamma26)
-[preety GitHub Profile](  )
-[Murali Mohan M  GitHub Profile](  )
+[preety GitHub Profile]( https://github.com/preetyh )
+[Murali Mohan M  GitHub Profile]( https://github.com/itsM57 )
