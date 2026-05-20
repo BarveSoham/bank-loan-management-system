@@ -188,4 +188,7 @@ Hosted on Neon PostgreSQL.
 ## Murali Mohan M 
 
 GitHub:
-[BarveSoham GitHub Profile](https://github.com/BarveSoham?utm_source=chatgpt.com)
+[Soham Barve GitHub Profile]( https://github.com/BarveSoham)
+[Sharanamma GitHub Profile](https://github.com/Sharanamma26)
+[preety GitHub Profile](  )
+[Murali Mohan M  GitHub Profile](  )
