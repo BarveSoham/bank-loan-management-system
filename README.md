@@ -1,73 +1,191 @@
-# React + TypeScript + Vite
+# Bank Loan Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Bank Loan Management System built using React, TypeScript, Node.js, Express, PostgreSQL, and Neon DB. This project helps manage customers, loan applications, approvals, reports, and EMI calculations through a modern banking dashboard UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Features
 
-## React Compiler
+## Customer Management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Add new customers
+* Edit customer details
+* Delete customers
+* Search customers
+* View customer profiles
+* Dynamic loan count tracking
 
-## Expanding the ESLint configuration
+## Loan Management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Create loan applications
+* View loan details
+* Loan approval workflow
+* Loan status updates
+* Delete loans
+* EMI display and tracking
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Dashboard Analytics
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Total customers
+* Active loans
+* Disbursed portfolio
+* Credit score overview
+* Recent loan activity
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Reports Section
+
+* Portfolio statistics
+* Loan summaries
+* Customer analytics
+* Financial insights
+
+## EMI Calculator
+
+* Loan EMI calculation
+* Interest calculations
+* Tenure analysis
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* Axios
+
+## Backend
+
+* Node.js
+* Express.js
+
+## Database
+
+* PostgreSQL
+* Neon Database
+
+## Deployment
+
+* Frontend: Vercel
+* Backend: Render
+
+---
+
+# Project Structure
+
+```bash
+new-age-bank/
+│
+├── server/
+│   ├── server.js
+│   ├── db.js
+│   └── .env
+│
+├── src/
+├── public/
+├── package.json
+└── vite.config.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Clone Repository
+
+```bash
+git clone https://github.com/BarveSoham/bank-loan-management-system.git
 ```
+
+---
+
+# Frontend Setup
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+# Backend Setup
+
+```bash
+cd server
+npm install
+node server.js
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file inside the `server` folder.
+
+```env
+DATABASE_URL=your_neon_database_url
+```
+
+---
+
+# API Endpoints
+
+## Customers
+
+```http
+GET /customers
+POST /customers
+PUT /customers/:id
+DELETE /customers/:id
+```
+
+## Loans
+
+```http
+GET /loans
+POST /loans
+PUT /loans/:id
+DELETE /loans/:id
+```
+
+---
+
+# Deployment
+
+## Frontend
+
+Deployed using Vercel.
+
+## Backend
+
+Deployed using Render.
+
+## Database
+
+Hosted on Neon PostgreSQL.
+
+---
+
+# Future Improvements
+
+* Authentication system
+* Admin roles
+* Email notifications
+* Loan payment tracking
+* Document uploads
+* Charts and advanced analytics
+* Mobile responsive optimization
+
+---
+
+# Author
+
+## Soham Barve
+## Sharanamma
+## preety
+## Murali Mohan M 
+
+GitHub:
+[BarveSoham GitHub Profile](https://github.com/BarveSoham?utm_source=chatgpt.com)
