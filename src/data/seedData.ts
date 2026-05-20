@@ -1,2 +1,3 @@
-export const seedCustomers = [...]
-export const seedLoans = [...]
+export const seedCustomers = [];
+
+export const seedLoans = [];
