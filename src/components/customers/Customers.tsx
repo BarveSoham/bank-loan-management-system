@@ -509,935 +509,935 @@ export default function Customers({
                         View
                       </Button>
 
-                    <Button
-                      onClick={() => {
-                        setSelectedCustomer(
-                          customer
-                        );
+                      <Button
+                        onClick={() => {
+                          setSelectedCustomer(
+                            customer
+                          );
 
-                        setShowEditModal(true);
-                      }}
-                    >
-                      Edit
-                    </Button>
+                          setShowEditModal(true);
+                        }}
+                      >
+                        Edit
+                      </Button>
 
-                  </div>
-                </td>
+                    </div>
+                  </td>
                 </tr>
-          )
+              )
             )}
-        </tbody>
-      </table>
-    </div>
+          </tbody>
+        </table>
+      </div>
 
-      {/* Modal */ }
-  {
-    showModal && (
-      <Modal
-        title="Add New Customer"
-        onClose={() =>
-          setShowModal(false)
-        }
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "1fr 1fr",
-
-            gap: "22px",
-          }}
-        >
-          {/* Full Name */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              FULL NAME *
-            </label>
-
-            <input
-              type="text"
-              value={name}
-              onChange={(e) =>
-                setName(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* Email */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              EMAIL *
-            </label>
-
-            <input
-              type="email"
-              value={email}
-              onChange={(e) =>
-                setEmail(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* Phone */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              PHONE *
-            </label>
-
-            <input
-              type="text"
-              value={phone}
-              onChange={(e) =>
-                setPhone(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* PAN */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              PAN NUMBER
-            </label>
-
-            <input
-              type="text"
-              placeholder="ABCDE1234F"
-              value={pan}
-              onChange={(e) =>
-                setPan(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* Credit Score */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              CREDIT SCORE
-            </label>
-
-            <input
-              type="number"
-              placeholder="300-900"
-              value={score}
-              onChange={(e) =>
-                setScore(
-                  Number(
-                    e.target.value
-                  )
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* Income */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              ANNUAL INCOME
-            </label>
-
-            <input
-              type="text"
-              value={income}
-              onChange={(e) =>
-                setIncome(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* Employer */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              EMPLOYER
-            </label>
-
-            <input
-              type="text"
-              value={employer}
-              onChange={(e) =>
-                setEmployer(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-              }}
-            />
-          </div>
-
-          {/* Address */}
-          <div
-            style={{
-              gridColumn:
-                "1 / span 2",
-            }}
-          >
-            <label
-              style={{
-                display: "block",
-                marginBottom:
-                  "8px",
-
-                fontSize:
-                  "14px",
-
-                fontWeight: 600,
-              }}
-            >
-              ADDRESS
-            </label>
-
-            <textarea
-              rows={3}
-              value={address}
-              onChange={(e) =>
-                setAddress(
-                  e.target.value
-                )
-              }
-              style={{
-                width: "100%",
-                padding: "14px",
-                border:
-                  "1px solid #ddd",
-
-                borderRadius:
-                  "12px",
-
-                fontSize: "15px",
-                resize: "none",
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Buttons */}
-        <div
-          style={{
-            display: "flex",
-
-            gap: "12px",
-
-            alignItems: "center",
-
-            flexWrap: "nowrap",
-          }}
-        >
-          <button
-            onClick={() =>
+      {/* Modal */}
+      {
+        showModal && (
+          <Modal
+            title="Add New Customer"
+            onClose={() =>
               setShowModal(false)
             }
-            style={{
-              padding:
-                "12px 24px",
-
-              borderRadius:
-                "12px",
-
-              border:
-                "1px solid #ddd",
-
-              background:
-                "#fff",
-
-              cursor:
-                "pointer",
-
-              fontWeight: 600,
-            }}
           >
-            Cancel
-          </button>
-
-          <button
-            onClick={addCustomer}
-            style={{
-              padding:
-                "12px 26px",
-
-              borderRadius:
-                "12px",
-
-              border: "none",
-
-              background:
-                "#154c79",
-
-              color: "#fff",
-
-              cursor:
-                "pointer",
-
-              fontWeight: 600,
-            }}
-          >
-            Add Customer
-          </button>
-        </div>
-      </Modal>
-    )
-  }
-
-  {/* VIEW MODAL */ }
-  {
-    showViewModal &&
-      selectedCustomer && (
-        <Modal
-          title="Customer Details"
-          onClose={() =>
-            setShowViewModal(false)
-          }
-        >
-          <div
-            style={{
-              display: "grid",
-              gap: "18px",
-            }}
-          >
-            <div>
-              <strong>Name:</strong>{" "}
-              {
-                selectedCustomer.name
-              }
-            </div>
-
-            <div>
-              <strong>Email:</strong>{" "}
-              {
-                selectedCustomer.email
-              }
-            </div>
-
-            <div>
-              <strong>Phone:</strong>{" "}
-              {
-                selectedCustomer.phone
-              }
-            </div>
-
-            <div>
-              <strong>PAN:</strong>{" "}
-              {
-                selectedCustomer.pan
-              }
-            </div>
-
-            <div>
-              <strong>Income:</strong>{" "}
-              {
-                selectedCustomer.income
-              }
-            </div>
-
-            <div>
-              <strong>Employer:</strong>{" "}
-              {
-                selectedCustomer.employer
-              }
-            </div>
-
-            <div>
-              <strong>Address:</strong>{" "}
-              {
-                selectedCustomer.address
-              }
-            </div>
-
-            <div>
-              <strong>Credit Score:</strong>{" "}
-              {
-                selectedCustomer.score
-              }
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-
-              justifyContent:
-                "flex-end",
-
-              marginTop: "28px",
-            }}
-          >
-            <Button
-              variant="danger"
-              onClick={() => {
-                deleteCustomer(
-                  selectedCustomer.id
-                );
-
-                setShowViewModal(
-                  false
-                );
-              }}
-            >
-              Delete Customer
-            </Button>
-          </div>
-        </Modal>
-      )
-  }
-
-  {/* EDIT MODAL */ }
-  {
-    showEditModal &&
-      selectedCustomer && (
-        <Modal
-          title="Edit Customer"
-          onClose={() =>
-            setShowEditModal(false)
-          }
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns:
-                "1fr 1fr",
-
-              gap: "22px",
-            }}
-          >
-            {/* Full Name */}
-            <div>
-              <label>
-                FULL NAME
-              </label>
-
-              <input
-                type="text"
-                value={
-                  selectedCustomer.name
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    name:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Email */}
-            <div>
-              <label>EMAIL</label>
-
-              <input
-                type="email"
-                value={
-                  selectedCustomer.email
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    email:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Phone */}
-            <div>
-              <label>PHONE</label>
-
-              <input
-                type="text"
-                value={
-                  selectedCustomer.phone
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    phone:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* PAN */}
-            <div>
-              <label>
-                PAN NUMBER
-              </label>
-
-              <input
-                type="text"
-                value={
-                  selectedCustomer.pan
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    pan:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Income */}
-            <div>
-              <label>
-                ANNUAL INCOME
-              </label>
-
-              <input
-                type="text"
-                value={
-                  selectedCustomer.income
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    income:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Employer */}
-            <div>
-              <label>
-                EMPLOYER
-              </label>
-
-              <input
-                type="text"
-                value={
-                  selectedCustomer.employer
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    employer:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Credit Score */}
-            <div>
-              <label>
-                CREDIT SCORE
-              </label>
-
-              <input
-                type="number"
-                value={
-                  selectedCustomer.score
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    score:
-                      Number(
-                        e.target
-                          .value
-                      ),
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Joined */}
-            <div>
-              <label>
-                JOINED DATE
-              </label>
-
-              <input
-                type="text"
-                value={
-                  selectedCustomer.joined
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    joined:
-                      e.target
-                        .value,
-                  })
-                }
-                style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
-
-                  borderRadius:
-                    "12px",
-                }}
-              />
-            </div>
-
-            {/* Address */}
             <div
               style={{
-                gridColumn:
-                  "1 / span 2",
+                display: "grid",
+                gridTemplateColumns:
+                  "1fr 1fr",
+
+                gap: "22px",
               }}
             >
-              <label>
-                ADDRESS
-              </label>
+              {/* Full Name */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
 
-              <textarea
-                rows={4}
-                value={
-                  selectedCustomer.address
-                }
-                onChange={(e) =>
-                  setSelectedCustomer({
-                    ...selectedCustomer,
-                    address:
-                      e.target
-                        .value,
-                  })
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  FULL NAME *
+                </label>
+
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) =>
+                    setName(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  EMAIL *
+                </label>
+
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) =>
+                    setEmail(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  PHONE *
+                </label>
+
+                <input
+                  type="text"
+                  value={phone}
+                  onChange={(e) =>
+                    setPhone(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* PAN */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  PAN NUMBER
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="ABCDE1234F"
+                  value={pan}
+                  onChange={(e) =>
+                    setPan(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* Credit Score */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  CREDIT SCORE
+                </label>
+
+                <input
+                  type="number"
+                  placeholder="300-900"
+                  value={score}
+                  onChange={(e) =>
+                    setScore(
+                      Number(
+                        e.target.value
+                      )
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* Income */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  ANNUAL INCOME
+                </label>
+
+                <input
+                  type="text"
+                  value={income}
+                  onChange={(e) =>
+                    setIncome(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* Employer */}
+              <div>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  EMPLOYER
+                </label>
+
+                <input
+                  type="text"
+                  value={employer}
+                  onChange={(e) =>
+                    setEmployer(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                  }}
+                />
+              </div>
+
+              {/* Address */}
+              <div
+                style={{
+                  gridColumn:
+                    "1 / span 2",
+                }}
+              >
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom:
+                      "8px",
+
+                    fontSize:
+                      "14px",
+
+                    fontWeight: 600,
+                  }}
+                >
+                  ADDRESS
+                </label>
+
+                <textarea
+                  rows={3}
+                  value={address}
+                  onChange={(e) =>
+                    setAddress(
+                      e.target.value
+                    )
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    fontSize: "15px",
+                    resize: "none",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div
+              style={{
+                display: "flex",
+
+                gap: "12px",
+
+                alignItems: "center",
+
+                flexWrap: "nowrap",
+              }}
+            >
+              <button
+                onClick={() =>
+                  setShowModal(false)
                 }
                 style={{
-                  width: "100%",
-                  padding: "14px",
-                  marginTop: "8px",
-                  border:
-                    "1px solid #ddd",
+                  padding:
+                    "12px 24px",
 
                   borderRadius:
                     "12px",
 
-                  resize:
-                    "none",
+                  border:
+                    "1px solid #ddd",
+
+                  background:
+                    "#fff",
+
+                  cursor:
+                    "pointer",
+
+                  fontWeight: 600,
                 }}
-              />
+              >
+                Cancel
+              </button>
+
+              <button
+                onClick={addCustomer}
+                style={{
+                  padding:
+                    "12px 26px",
+
+                  borderRadius:
+                    "12px",
+
+                  border: "none",
+
+                  background:
+                    "#154c79",
+
+                  color: "#fff",
+
+                  cursor:
+                    "pointer",
+
+                  fontWeight: 600,
+                }}
+              >
+                Add Customer
+              </button>
             </div>
-          </div>
+          </Modal>
+        )
+      }
 
-          {/* Buttons */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent:
-                "flex-end",
-
-              gap: "14px",
-              marginTop: "30px",
-            }}
+      {/* VIEW MODAL */}
+      {
+        showViewModal &&
+        selectedCustomer && (
+          <Modal
+            title="Customer Details"
+            onClose={() =>
+              setShowViewModal(false)
+            }
           >
-            <button
-              onClick={() =>
-                setShowEditModal(false)
-              }
+            <div
               style={{
-                padding:
-                  "12px 24px",
-
-                borderRadius:
-                  "12px",
-
-                border:
-                  "1px solid #ddd",
-
-                background:
-                  "#fff",
-
-                cursor:
-                  "pointer",
+                display: "grid",
+                gap: "18px",
               }}
             >
-              Cancel
-            </button>
+              <div>
+                <strong>Name:</strong>{" "}
+                {
+                  selectedCustomer.name
+                }
+              </div>
 
-            <button
-              onClick={async () => {
-  try {
-    const response =
-      await axios.put(
-        `http://localhost:5000/customers/${selectedCustomer!.id}`,
-        selectedCustomer
-      );
+              <div>
+                <strong>Email:</strong>{" "}
+                {
+                  selectedCustomer.email
+                }
+              </div>
 
-    setCustomers(
-      customers.map(
-        (customer) =>
-          customer.id ===
-          selectedCustomer!.id
-            ? response.data
-            : customer
-      )
-    );
+              <div>
+                <strong>Phone:</strong>{" "}
+                {
+                  selectedCustomer.phone
+                }
+              </div>
 
-    setShowEditModal(false);
-  } catch (error) {
-    console.error(error);
-  }
-}}
+              <div>
+                <strong>PAN:</strong>{" "}
+                {
+                  selectedCustomer.pan
+                }
+              </div>
+
+              <div>
+                <strong>Income:</strong>{" "}
+                {
+                  selectedCustomer.income
+                }
+              </div>
+
+              <div>
+                <strong>Employer:</strong>{" "}
+                {
+                  selectedCustomer.employer
+                }
+              </div>
+
+              <div>
+                <strong>Address:</strong>{" "}
+                {
+                  selectedCustomer.address
+                }
+              </div>
+
+              <div>
+                <strong>Credit Score:</strong>{" "}
+                {
+                  selectedCustomer.score
+                }
+              </div>
+            </div>
+            <div
               style={{
-                padding:
-                  "12px 26px",
+                display: "flex",
 
-                borderRadius:
-                  "12px",
+                justifyContent:
+                  "flex-end",
 
-                border: "none",
-
-                background:
-                  "#154c79",
-
-                color: "#fff",
-
-                cursor:
-                  "pointer",
-
-                fontWeight: 600,
+                marginTop: "28px",
               }}
             >
-              Save Changes
-            </button>
-          </div>
-        </Modal>
-      )
-  }
+              <Button
+                variant="danger"
+                onClick={() => {
+                  deleteCustomer(
+                    selectedCustomer.id
+                  );
+
+                  setShowViewModal(
+                    false
+                  );
+                }}
+              >
+                Delete Customer
+              </Button>
+            </div>
+          </Modal>
+        )
+      }
+
+      {/* EDIT MODAL */}
+      {
+        showEditModal &&
+        selectedCustomer && (
+          <Modal
+            title="Edit Customer"
+            onClose={() =>
+              setShowEditModal(false)
+            }
+          >
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns:
+                  "1fr 1fr",
+
+                gap: "22px",
+              }}
+            >
+              {/* Full Name */}
+              <div>
+                <label>
+                  FULL NAME
+                </label>
+
+                <input
+                  type="text"
+                  value={
+                    selectedCustomer.name
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      name:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label>EMAIL</label>
+
+                <input
+                  type="email"
+                  value={
+                    selectedCustomer.email
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      email:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label>PHONE</label>
+
+                <input
+                  type="text"
+                  value={
+                    selectedCustomer.phone
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      phone:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* PAN */}
+              <div>
+                <label>
+                  PAN NUMBER
+                </label>
+
+                <input
+                  type="text"
+                  value={
+                    selectedCustomer.pan
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      pan:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Income */}
+              <div>
+                <label>
+                  ANNUAL INCOME
+                </label>
+
+                <input
+                  type="text"
+                  value={
+                    selectedCustomer.income
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      income:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Employer */}
+              <div>
+                <label>
+                  EMPLOYER
+                </label>
+
+                <input
+                  type="text"
+                  value={
+                    selectedCustomer.employer
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      employer:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Credit Score */}
+              <div>
+                <label>
+                  CREDIT SCORE
+                </label>
+
+                <input
+                  type="number"
+                  value={
+                    selectedCustomer.score
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      score:
+                        Number(
+                          e.target
+                            .value
+                        ),
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Joined */}
+              <div>
+                <label>
+                  JOINED DATE
+                </label>
+
+                <input
+                  type="text"
+                  value={
+                    selectedCustomer.joined
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      joined:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+                  }}
+                />
+              </div>
+
+              {/* Address */}
+              <div
+                style={{
+                  gridColumn:
+                    "1 / span 2",
+                }}
+              >
+                <label>
+                  ADDRESS
+                </label>
+
+                <textarea
+                  rows={4}
+                  value={
+                    selectedCustomer.address
+                  }
+                  onChange={(e) =>
+                    setSelectedCustomer({
+                      ...selectedCustomer,
+                      address:
+                        e.target
+                          .value,
+                    })
+                  }
+                  style={{
+                    width: "100%",
+                    padding: "14px",
+                    marginTop: "8px",
+                    border:
+                      "1px solid #ddd",
+
+                    borderRadius:
+                      "12px",
+
+                    resize:
+                      "none",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent:
+                  "flex-end",
+
+                gap: "14px",
+                marginTop: "30px",
+              }}
+            >
+              <button
+                onClick={() =>
+                  setShowEditModal(false)
+                }
+                style={{
+                  padding:
+                    "12px 24px",
+
+                  borderRadius:
+                    "12px",
+
+                  border:
+                    "1px solid #ddd",
+
+                  background:
+                    "#fff",
+
+                  cursor:
+                    "pointer",
+                }}
+              >
+                Cancel
+              </button>
+
+              <button
+                onClick={async () => {
+                  try {
+                    const response =
+                      await axios.put(
+                        `http://localhost:5000/customers/${selectedCustomer!.id}`,
+                        selectedCustomer
+                      );
+
+                    setCustomers(
+                      customers.map(
+                        (customer) =>
+                          customer.id ===
+                            selectedCustomer!.id
+                            ? response.data
+                            : customer
+                      )
+                    );
+
+                    setShowEditModal(false);
+                  } catch (error) {
+                    console.error(error);
+                  }
+                }}
+                style={{
+                  padding:
+                    "12px 26px",
+
+                  borderRadius:
+                    "12px",
+
+                  border: "none",
+
+                  background:
+                    "#154c79",
+
+                  color: "#fff",
+
+                  cursor:
+                    "pointer",
+
+                  fontWeight: 600,
+                }}
+              >
+                Save Changes
+              </button>
+            </div>
+          </Modal>
+        )
+      }
     </div >
   );
 }
